@@ -59,6 +59,14 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
+		
+		<!-- fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.46</version>
+		</dependency>
+		
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -99,7 +107,6 @@
 			<artifactId>sharding-jdbc-core</artifactId>
 			<version>${shardingjdbc.version}</version>
 		</dependency>
-		
 		
 		<dependency>
 			<groupId>javax.persistence</groupId>

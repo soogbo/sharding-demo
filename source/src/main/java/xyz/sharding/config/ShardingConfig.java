@@ -24,7 +24,7 @@ import io.shardingjdbc.core.api.config.ShardingRuleConfiguration;
 import io.shardingjdbc.core.keygen.DefaultKeyGenerator;
 import tk.mybatis.mapper.autoconfigure.MybatisProperties;
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
-import xyz.sharding.algorithm.UserTableRuleConfig;
+import xyz.sharding.algorithm.UserTableRule;
 import xyz.sharding.annotations.ShardingMapper;
 
 @Configuration
@@ -53,7 +53,7 @@ public class ShardingConfig {
 //        KeyGenerator keyGenerator = keyGeneratorFactory.getKeyGenerator(DefaultKeyGenerator.class);
         
         
-        shardingRuleConfig.getTableRuleConfigs().add(new UserTableRuleConfig(logicDataSource, null, "0..2"));
+        shardingRuleConfig.getTableRuleConfigs().add(new UserTableRule(logicDataSource, null, "0..2"));
         shardingRuleConfig.setDefaultDataSourceName(logicDataSource);
         // 获取数据源对象
         DataSource shardingDataSource = null;

@@ -1,16 +1,17 @@
 package xyz.sharding.mapper;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Select;
 
 import tk.mybatis.mapper.common.BaseMapper;
-import xyz.sharding.annotations.GeneralMapper;
+import xyz.sharding.annotations.ShardingMapper;
 import xyz.sharding.pojo.po.UserSharding;
 
-@GeneralMapper
+@ShardingMapper
 public interface UserShardingMapper extends BaseMapper<UserSharding>{
     
-    @Select(value = { "select * from ",UserSharding.TABLE_NAME})
+    @Select(value = { "select * from ",UserSharding.TABLE_NAME, " order by user_id asc"})
     List<UserSharding> findAllUser();
 
     /**
