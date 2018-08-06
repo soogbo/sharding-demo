@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>xyz.sharding.demo</groupId>
-	<artifactId>sharding-demo</artifactId>
+	<groupId>xyz.sharding</groupId>
+	<artifactId>xyz-sharding2.x</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<description>shardingjdbc.demo</description>
+	<description>shardingjdbc.demo.v2.x</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -165,7 +165,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>sharding-demo</finalName>
+		<finalName>xyz-sharding2.x</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
